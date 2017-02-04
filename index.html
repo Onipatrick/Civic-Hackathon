@@ -7,7 +7,10 @@
     <meta name="author" content="">
     <link rel="icon" href="img/favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Rate My Department</title>
+
+    <script src="js/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,10 +23,9 @@
 
     <div class="container">
       <form class="form-signin">
-      <h2 class="form-signin-heading text-center"><img src="img/logo.png" class="img-responsive" style="max-width:200px; margin: 0 auto;"></h2>
-
+      <h2 class="form-signin-heading text-center"><img src="img/logo.png" class="img-responsive" style="max-width:400px; margin: 0 auto;"></h2>
         <input type="text" id="CaseID" class="form-control" placeholder="Case Number" required autofocus>
-        <button id='myButton' class="btn btn-lg btn-primary btn-block">Sign in</button>
+        <button id='myButton' class="btn btn-lg btn-primary btn-block" style="margin-top:50px;">Lookup</button>
       </form>
 
     </div> <!-- /container -->
@@ -46,7 +48,7 @@
       console.log('enter')
       var name = $('#CaseID').val()
       localStorage.CaseID=name
-      window.location.href = "./homepage.html";
+      window.location.href = "./homepage.html";      
     })
 </script>
   </body>

@@ -7,7 +7,10 @@
     <meta name="author" content="">
     <link rel="icon" href="img/favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Rate My Department</title>
+
+    <script src="js/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,8 +25,8 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
-
+    <a class="navbar-brand" href="#">Rate My Cop</a>
+    <!--
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -47,22 +50,27 @@
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      </form>-->
     </div>
 </nav>
       <form class="form-signin text-center">
       <!-- <h2 id='CaseID' class = 'text-center'/> -->
-      <h2 class="form-signin-heading text-center"><img src="img/logo.png" class="img-responsive" style="max-width:200px; margin: 0 auto;"></h2>
+      <h2 class="form-signin-heading text-center"><img src="img/logo.png" class="img-responsive" style="max-width:400px; margin: 0 auto;"></h2>
 
-        <p>How would you rate our COP</p>
+        <h2 style="margin-bottom:50px">Record 1234 - Traffic Stop located.</h2>
+        <h1 style="margin-bottom:50px">How would you rate our interaction?</h1>
+        <h5>Rate your interaction on a scale from 1 to 10. 1 meaning good experience and 10 bad.</h5>
         <div style='width:100%;padding-bottom:10px;'>
         <input type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
-        <span id="range">0</span>
+        <h2><span id="range">0</span></h2>
         <div>
-        <textarea id ='textInput'class = 'text-center'rows="4" cols="30" placeholder="Please discribe you're experience">
+        <textarea id ='textInput' cols="70" style="padding-bottom:50px" placeholder="Please discribe you're experience">
 
         </textarea>
-        <button id='myButton' class="btn btn-lg btn-primary btn-block">Submit Query</button>
+        <div class="col-xs-4 col-lg-4 offset-lg-4">
+        <button id='myButton' class="btn btn-lg btn-primary btn-block" style="margin-top:50px;">Submit Rating</button>
+        </div>
+        
       </form>
 
     </div> <!-- /container -->
@@ -79,6 +87,9 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
+
+      swal("Record Found!", "Located record 1234 - Traffic Stop", "success")
+
       // document.getElementById("CaseID").innerHTML = localStorage.name
       function showValue(newValue)
         {
@@ -91,8 +102,10 @@
           var text = $('#textInput').val()
           localStorage.Range=range
           localStorage.Text=text
-          window.location.href='./date.html'
+          window.location.href='./date.html'          
         })
+
+        
 </script>
   </body>
 </html>
